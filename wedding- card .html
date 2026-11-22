@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiva & Antima - Shubh Vivah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #2b050b;
+      color: #fff6e5;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .bg-pattern {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top, #5c0a17 0%, #240308 100%);
+      z-index: -2;
+    }
+
+    .petal {
+      position: fixed;
+      top: -10%;
+      color: #f3c65f;
+      font-size: 18px;
+      opacity: 0.7;
+      animation: fall linear infinite;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    #cover-screen {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle, #690b1a 0%, #240308 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      z-index: 100;
+      transition: transform 0.9s ease-in-out, opacity 0.8s ease;
+    }
+
+    #cover-screen.open {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .envelope-box {
+      border: 2px solid #d4af37;
+      border-radius: 20px;
+      padding: 35px 25px
+      
